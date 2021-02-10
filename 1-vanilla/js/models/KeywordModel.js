@@ -1,4 +1,5 @@
 export default {
+  // 추천해주는 검색
   data: [
     {keyword: '이탈리아'}, 
     {keyword: '세프의요리'}, 
