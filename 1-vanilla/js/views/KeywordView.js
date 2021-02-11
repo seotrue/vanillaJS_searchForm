@@ -35,6 +35,6 @@ KeywordView.bindClickEvent = function () {
 KeywordView.onClickKeyword = function (e) {
   const { keyword } = e.currentTarget.dataset
   this.emit('@click', { keyword })
-}
+};
 
 export default KeywordView

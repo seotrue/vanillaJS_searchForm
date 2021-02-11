@@ -27,8 +27,8 @@ export default {
   },
 
   renderView() {
-    console.log(tag, 'rednerView()')
-    TabView.setActiveTab(this.selectedTab)
+    console.log(tag, 'rednerView()');
+    TabView.setActiveTab(this.selectedTab);
     
     if (this.selectedTab === '추천 검색어') {
       this.fetchSearchKeyword()
@@ -46,6 +46,7 @@ export default {
   },
 
   search(query) {
+    FormView.setValue(query)
     SearchModel.list(query).then(data => {
       this.onSearchResult(data)
     })
@@ -58,7 +59,7 @@ export default {
 
   onResetForm() {
     console.log(tag, 'onResetForm()')
-    ResultView.hide()
+    this.renderView();
   },
 
   onSearchResult(data) {
@@ -72,6 +73,9 @@ export default {
   },
 
   onClickKeyword(keyword) {
-    this.search(keyword)
+    this.search(keyword);
+
+    // // todo: 검색 폼에 선택된 추가 검색어 설정
+    // FormView.setInputKeyword(keyword)
   }
 }
