@@ -20,7 +20,7 @@ ResultView.render = function (data = []) {
 
 ResultView.getSearchResultsHtml = function (data) {
   return data.reduce((html, item) => {
-    html += this.getSearchItemHtml(item)
+    html += this.getSearchItemHtml(item);
     return html
   }, '<ul>') + '</ul>'
 }
@@ -30,6 +30,6 @@ ResultView.getSearchItemHtml = function (item) {
     <img src="${item.image}" />
     <p>${item.name}</p>
   </li>`
-}
+};
 
 export default ResultView

@@ -21,6 +21,8 @@ export default {
 
   onResetForm() {
     console.log(tag, 'onResetForm()')
+    // todo: x버튼을 클릭하면 검색폼이 초기화 되고, 검색 결과가 사라진다.
+    ResultView.hide()
   },
 
   search(query) {
