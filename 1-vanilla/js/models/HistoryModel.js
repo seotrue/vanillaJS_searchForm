@@ -1,4 +1,4 @@
-export default {
+ export default {
   data: [
     { keyword: '검색기록2', date: '12.03' },
     { keyword: '검색기록1', date: '12.02'},
