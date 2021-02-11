@@ -11,12 +11,12 @@
   
   add(keyword = '') {
     keyword = keyword.trim()
-    if (!keyword) return 
+    if (!keyword) return ;
     if (this.data.some(item => item.keyword === keyword)) {
       this.remove(keyword)
     }
 
-    const date = '12.31'
+    const date = '12.31';
     this.data = [{keyword, date}, ...this.data]
   },
   
